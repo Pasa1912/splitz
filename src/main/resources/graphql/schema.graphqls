@@ -1,0 +1,15 @@
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    phoneNumber: String!
+    createdAt: String!
+}
+
+type Query {
+    getFriends(userId: ID!): [User!]!
+}
+
+type Mutation {
+    addFriend(userId: ID!, friendId: ID!): String
+}
